@@ -11,8 +11,6 @@ router.get("/grafico", async (req, res) => {
     res.status(500).json({ error: "Error al obtener datos para el gráfico" });
   }
 });
-
-// manejar error 404
 router.use((req, res) => {
   res.status(404).send("Ruta no encontrada");
 });
